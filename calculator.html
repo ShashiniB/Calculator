@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>calculator</title>
+<link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+
+<div class="cal">
+<input id="no1" type="text" placeholder="No 1" onclick="cal(this.id)">
+<input id="no2" type="text" placeholder="No2" onclick="cal(this.id)">
+<br/><br/>
+<input id="res" type="name" placeholder="Result">
+<br/><br/>
+
+
+<div class="button">
+<button id="7" value="7" onclick="cal(this.id)">7</button>
+<button id="8" value="8" onclick="cal(this.id)">8</button>
+<button id="9" value="9" onclick="cal(this.id)">9</button>
+<button id="+" type="add" onclick="add()">+</button>
+<br/><br/>
+<button id="4" value="4" onclick="cal(this.id)">4</button>
+<button id="5" value="5" onclick="cal(this.id)">5</button>
+<button id="6" value="6" onclick="cal(this.id)">6</button>
+<br/><br/>
+<button id="1" value="1" onclick="cal(this.id)">1</button>
+<button id="2" value="2" onclick="cal(this.id)">2</button>
+<button id="3" value="3" onclick="cal(this.id)">3</button>
+<br/><br/>
+<button id="0" value="0" onclick="cal(this.id)">0</button>
+<button id="." value="." onclick="cal(this.id)">.</button>
+<button id="*"onclick="add()">*</button>
+<br/><br/>
+<button id="+"onclick="add()">+</button>
+<button id="C"onclick="clr()">C</button>
+</div>
+</div>
+
+<script>
+
+var no1Sel,no2Sel;
+
+function cal(res){
+
+var x,y;
+
+if(res=='no1'){
+no1Sel=true;
+no2Sel=false;
+}
+
+else if(res=='no2'){
+no2Sel=true;
+no1Sel=false;
+}
+
+if(no1Sel){
+x=document.getElementById(res).value;
+document.getElementById('no1').value+=x;
+}
+
+if(no2Sel){
+y=document.getElementById(res).value;
+document.getElementById('no2').value +=y;
+}
+}
+
+function add(){
+
+var no1,no2,result;
+
+no1=document.getElementById('no1').value;
+no2=document.getElementById('no2').value;
+
+result=parseInt(no1)+parseInt(no2);
+
+document.getElementById('res').value=result;
+}
+
+function clr(){
+
+document.getElementById('no1').value=" ";
+document.getElementById('no2').value=" ";
+document.getElementById('res').value=" ";
+}
+
+</script>
+</body>
+</html>
