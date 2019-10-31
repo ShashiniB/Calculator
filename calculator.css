@@ -1,0 +1,21 @@
+.cal{
+	width:200px;
+	padding:10px;
+	margin:0;
+	background-color:black;
+}
+
+input[type="text"]{
+	width:95px;
+}
+
+input[type="name"]{
+	width:195px;
+}
+
+.add{
+	height:100%;
+	grid-row-start:3;
+	gride-row-end:4;
+	
+}
